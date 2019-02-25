@@ -1,21 +1,32 @@
 #include <stdio.h>
 
-int data[] = { 42, 19, 1, 5, 7, 8, 3 };
+int n;
+int k;
 
-void isort(int* a, int n) {
-  for(int i = 1; i < n; i++) {
-    for(int j = i; j > 0 && a[j] < a[j-1]; j--) {
-      int t = a[j];
-      a[j] = a[j-1];
-      a[j-1] = t;
-    }
-  }
+int NchooseK (int x, int y) {
+
+	if(y == 0) {
+		return 1;
+	}else if (x == y) {
+ 		return 1;
+	}else {
+		return NchooseK(x-1, y-1) + NchooseK(x-1, y);
+	}
+
 }
 
 void main() {
-  isort(data, 7);
 
-  for(int i = 0; i < 7; i++) {
-    printf("%d %d\n", i, data[i]);
-  }
+
+	while(n != 0 && k != 0) {
+
+		scanf("%d %d\n", &n, &k);
+
+		if(n != 0 && k != 0) {
+
+			printf("%d", NchooseK(n, k));
+
+		}
+	}
+
 }
