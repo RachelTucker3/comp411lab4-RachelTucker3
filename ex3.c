@@ -21,7 +21,7 @@ void main() {
 
 		printf("Enter two integers (for n and k) seperated by space:\n");
 
-		scanf("%d %d", &n, &k);
+		scanf("%d %d\n", &n, &k);
 
 		if(n != 0 && k != 0) {
 
