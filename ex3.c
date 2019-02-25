@@ -19,6 +19,8 @@ void main() {
 
 	while(n != 0 && k != 0) {
 
+		printf("Enter two integers (for n and k) seperated by space:\n");
+
 		scanf("%d %d", &n, &k);
 
 		if(n != 0 && k != 0) {
