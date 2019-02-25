@@ -1,4 +1,3 @@
-/* Example: bubble sort strings in array */
 
 #include <stdio.h>  /* Need for standard I/O functions */
 #include <string.h> /* Need for strlen() */
@@ -57,7 +56,7 @@ void my_swap_strings(char string1[], char string2[]) {
   char temp;    // char variable used in swapping one character at a time
 
   /* Write code here to swap the contents of string1 and string2, one
-     character at a time, WITHOUT USING ANY C STRING LIBRARY FUNCTIONS. 
+     character at a time, WITHOUT USING ANY C STRING LIBRARY FUNCTIONS.
 
      The max length of the strings is LEN, though they may be shorter, so look
      for the string terminators.
@@ -113,18 +112,8 @@ int main()
   }
 
   /* Write a for loop here to print all the strings. */
-  /* Bubble sort */
-  /* Write code here to bubble sort the strings in ascending alphabetical order
 
-     Use the function my_compare_strings() to compare two strings.  If they are out of order,
-     use the function my_swap_strings() to swap their contents.
 
-  */
-
-  
-  
-  /* Output sorted list */
-  
   puts("\nIn alphabetical order, the strings are:");
   /* Write a for loop here to print all the strings. Feel free to use puts/printf
      etc. for printing each string.
@@ -157,6 +146,5 @@ int main()
     printf("%s\n", Strings[i]);
 
   }
-
 
 }
