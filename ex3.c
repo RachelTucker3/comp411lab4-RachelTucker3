@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-int n;
-int k;
-
 int NchooseK (int x, int y) {
 
 	if(y == 0) {
@@ -17,16 +14,21 @@ int NchooseK (int x, int y) {
 
 void main() {
 
+	int n = 1;
+	int k = 1;
 
 	while(n != 0 && k != 0) {
 
-		scanf("%d %d\n", &n, &k);
+		scanf("%d %d", &n, &k);
 
 		if(n != 0 && k != 0) {
 
-			printf("%d", NchooseK(n, k));
+			int q = NchooseK(n, k);
+
+			printf("%d\n", q);
 
 		}
 	}
 
 }
+
