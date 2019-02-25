@@ -7,7 +7,7 @@ int NchooseK (int x, int y) {
 	}else if (x == y) {
  		return 1;
 	}else {
-		return NchooseK(x-1, y-1) + NchooseK(x-1, y);
+		return (NchooseK(x-1, y-1) + NchooseK(x-1, y));
 	}
 
 }
