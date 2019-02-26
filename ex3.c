@@ -9,7 +9,7 @@ int main() {
 	int q;
 
 
-	printf("Enter two integers (for n and k) seperated by space:\n");
+	printf("Enter two integers (for n and k) separated by space:\n");
 
 	scanf("%i %i", &n, &k);
 
