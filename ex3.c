@@ -15,26 +15,23 @@ int NchooseK (int x, int y) {
 
 void main() {
 
-	int n = 1;
-	int k = 1;
+	int n;
+	int k;
 	int q;
 
-	while(n != 0) {
 
-		printf("Enter two integers (for n and k) seperated by space:\n");
+	printf("Enter two integers (for n and k) seperated by space:\n");
 
-		scanf("%d %d", &n, &k);
+	scanf("%i %i", &n, &k);
 
-		if(n != 0) {
-
-			q = NchooseK(n, k);
-			printf("%d\n", q);
-
-		}
-
-
+	if (n == 0 && k == 0) {
+		printf("%d\n", 1);
+	} else {
+		q = NchooseK(n, k);
+		printf("%d\n", q);
+		main();
 	}
-	printf("%d\n", 1);
+
 
 }
 
