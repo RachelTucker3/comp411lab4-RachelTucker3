@@ -31,7 +31,10 @@ void main() {
 			printf("%d\n", q);
 
 		}
+
+
 	}
+	printf("%d\n", 1);
 
 }
 
