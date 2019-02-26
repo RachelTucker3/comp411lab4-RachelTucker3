@@ -13,9 +13,13 @@ int my_compare_strings(char string1[], char string2[]) {
 
   for(int x = 0; x < LEN; x++) {
 
-    if(string1[x] != string2[x]) {
 
-      if(string1[x] < string2[x]) {
+        if (x == LEN - 1) {
+
+		return 0;
+
+	}
+	if(string1[x] < string2[x]) {
 
         return -1;
 
@@ -24,14 +28,9 @@ int my_compare_strings(char string1[], char string2[]) {
           return 1;
 
       }
-
-    }else {
-
-      return 0;
-
-    }
-
   }
+
+}
 
 
 
@@ -50,7 +49,6 @@ int my_compare_strings(char string1[], char string2[]) {
       of the characters in the string, from left to right.  See the writeup
       for more details.
   */
-}
 
 
 void my_swap_strings(char string1[], char string2[]) {
@@ -64,9 +62,6 @@ void my_swap_strings(char string1[], char string2[]) {
   */
 
   for(int i = 0; i < LEN; i++) {
-
-    char str1 = string1[i];
-    char str2 = string2[i];
 
   //  if(str1 == NULL char && str2 == NULL char) {
 
@@ -121,7 +116,17 @@ int main()
 
   */
 
-  
+	for( int i = 0; i < NUM; i++) {
+
+		for(int j = 0; j < NUM - 1; j++) {
+
+			if(my_compare_strings(Strings[j], Strings[j +1]) == 1) {
+				my_swap_strings(Strings[j], Strings[j+1]);
+			}
+
+		}
+
+	}
   
   /* Output sorted list */
   
@@ -129,28 +134,6 @@ int main()
   /* Write a for loop here to print all the strings. Feel free to use puts/printf
      etc. for printing each string.
   */
-
-  for(int i = 0; i < NUM; i++) {
-
-    if(my_compare_strings(Strings[i], Strings[i+1]) == 1 || my_compare_strings(Strings[i], Strings[i+1]) == 0) {
-
-      i = i;
-
-    } else {
-
-  for(int i = 0; i < NUM; i++) {
-
-    if(my_compare_strings(Strings[i], Strings[i+1]) == -1) {
-
-      my_swap_strings(Strings[i], Strings[i+1]);
-
-    }
-
-    }
-
-  }
-
-  }
 
   for(int i = 0; i < NUM; i++) {
 
