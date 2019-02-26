@@ -1,19 +1,8 @@
 #include <stdio.h>
 
-int NchooseK (int x, int y) {
+int NchooseK(int n, int k);
 
-	if(y == 0) {
-		return 1;
-	}else if (x == y) {
- 		return 1;
-	}else {
-		int r = (NchooseK(x-1, y-1) + NchooseK(x-1, y));
-		return r;
-	}
-
-}
-
-void main() {
+int main() {
 
 	int n;
 	int k;
@@ -32,6 +21,19 @@ void main() {
 		main();
 	}
 
+
+}
+
+int NchooseK (int x, int y) {
+
+        if(y == 0) {
+                return 1;
+        }else if (x == y) {
+                return 1;
+        }else {
+                int r = (NchooseK(x-1, y-1) + NchooseK(x-1, y));
+                return r;
+        }
 
 }
 
